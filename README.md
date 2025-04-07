@@ -16,6 +16,9 @@ NeithRecon is a lightweight and automated vulnerability scanner that checks for 
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/neithrecon.git
-cd neithrecon
+git clone https://github.com/Nexian2/tool-for-finding-website-vulnerabilities
+cd tool-for-finding-website-vulnerabilities
 pip install -r requirements.txt
+
+## start
+python3 NeithRecon.py
