@@ -16,15 +16,15 @@ BANNER = """
 class NeithAI:
     def suggest(self, vuln):
         responses = {
-            "SQL Injection": "Gunakan prepared statement (parameterized queries).",
-            "XSS": "Filter dan escape setiap input user sebelum ditampilkan.",
-            "CSRF": "Tambahkan CSRF token unik di setiap form.",
-            "IDOR": "Gunakan otorisasi berbasis akses yang ketat.",
-            "SSRF": "Validasi dan filter URL, jangan izinkan internal IP.",
-            "Login Bypass": "Gunakan hash password dan validasi input ketat.",
-            "Brute Force": "Implement rate limiting dan captcha.",
+            "SQL Injection": "Use prepared statements or parameterized queries.",
+            "XSS": "Always escape and validate user inputs before rendering.",
+            "CSRF": "Implement a CSRF token in each form.",
+            "IDOR": "Apply strict access control checks on every resource.",
+            "SSRF": "Block internal IP ranges and validate outgoing requests.",
+            "Login Bypass": "Use hashed passwords and strict input validation.",
+            "Brute Force": "Use rate limiting and CAPTCHA mechanisms.",
         }
-        return responses.get(vuln, "Perlu dilakukan audit manual lebih lanjut.")
+        return responses.get(vuln, "Manual audit is recommended for deeper investigation.")
 
 def scan_sql_injection(url):
     payload = "' OR '1'='1"
